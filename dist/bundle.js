@@ -1,1 +1,0 @@
-window.onload=()=>{document.body.append((()=>{const e=document.createElement("div");return e.innerHTML="Hello my beautiful world!",e})())};
