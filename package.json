@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
+    "build:prod": "webpack -- -p",
     "build:start": "npm run build && npm start",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "npm run build:prod"
   },
   "keywords": [],
   "author": "",
