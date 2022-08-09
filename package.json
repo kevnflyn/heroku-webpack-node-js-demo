@@ -9,7 +9,7 @@
     "build": "webpack",
     "build:prod": "webpack -- -p",
     "build:start": "npm run build && npm start",
-    "heroku-postbuild": "npm run build:prod"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
