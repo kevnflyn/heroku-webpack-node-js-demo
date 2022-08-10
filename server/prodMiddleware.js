@@ -10,8 +10,6 @@ const commonMiddlware = require('./commonMiddleware.js')
 const port = process.env.PORT || 3000
 
 module.exports = app => {
-  app.use(express.static('dist'))
-
   commonMiddlware(app)
 
   app.get('/home|/login|/register|/password-reset-request|/password-reset|/app|/app/*', (req, res) => {

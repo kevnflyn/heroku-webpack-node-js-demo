@@ -31,8 +31,6 @@ module.exports = app => {
     WebpackHotMiddleware(compiler)
   )
 
-  app.use(express.static('assets'))
-
   commonMiddlware(app)
 
   app.get('*', (req, res) => {
