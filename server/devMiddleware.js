@@ -1,6 +1,4 @@
 const fs = require('fs')
-const http = require('http')
-const https = require('https')
 const path = require('path')
 const express = require('express')
 
@@ -15,8 +13,7 @@ const commonMiddlware = require('./commonMiddleware.js')
 
 const debugDevMiddleware = debug('devMiddleware')
 
-const httpPort = 3000
-const httpsPort = 4000
+const port = process.env.PORT || 3000
 
 module.exports = app => {
   debugDevMiddleware(chalk.green('Compiling bundle...'))
@@ -54,14 +51,5 @@ module.exports = app => {
   //   })
   // })
 
-  // const sslOptions = {
-  //   key: fs.readFileSync('138.68.64.50+3-key.pem'),
-  //   cert: fs.readFileSync('138.68.64.50+3.pem')
-  // }
-
-  http.createServer(app).listen(httpPort)
-
-  // https.createServer(sslOptions, app).listen(httpsPort, () => {
-  //   debug(`Dev server is running on port ${chalk.green(httpsPort)}`)
-  // })
+  app.listen(httpPort)
 }
