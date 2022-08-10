@@ -1,14 +1,22 @@
 const fs = require('fs')
 const path = require('path')
 
+const express = require('express')
+
 const commonMiddlware = require('./commonMiddleware.js')
 
 const PORT = process.env.PORT || 3000
 
 module.exports = app => {
+  app.use(express.static('dist'))
+
   commonMiddlware(app)
 
   app.get('*', (req, res) => {
+    console.log(`
+      sendFile to ${res.sendFile(path.resolve('dist', 'index.html'))}
+    `)
+
     res.sendFile(path.resolve('dist', 'index.html'))
   });
 
