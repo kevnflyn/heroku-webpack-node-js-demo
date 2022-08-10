@@ -1,33 +1,36 @@
 const path = require('path')
 
+const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: [
-    path.resolve(process.cwd(), 'src/index.js') // ToDo: add src/App.jsx
+    path.resolve(process.cwd(), 'src/App.jsx')
   ],
   resolve: {
+    alias: {
+      Src: path.resolve(__dirname, '..', 'src'),
+      Assets: path.resolve(__dirname, '..', 'assets'),
+      I18n: path.resolve(__dirname, '..', 'i18n')
+    },
     modules: [
-      path.resolve(process.cwd(), 'node_modules'),
-      path.resolve(process.cwd(), 'src'),
-      path.resolve(process.cwd(), 'assetLocations')
+      'node_modules',
+      'src'
     ],
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.less', '.css']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
-      inject: 'body'
+      template: './index.html'
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: 'assets/images', to: 'assets/images' },
-    //     { from: 'i18n/translations', to: 'assets/translations' }
-    //   ],
-    //   options: {
-    //     concurrency: 100
-    //   }
-    // })
+    new CopyPlugin({
+      patterns: [
+        { from: 'assets/images', to: 'assets/images' },
+        { from: 'assets/translations', to: 'assets/translations' }
+      ],
+      options: {
+        concurrency: 100
+      }
+    })
   ]
 }

@@ -1,0 +1,29 @@
+@import '../../style/phare-theme.less';
+
+.noUnderline {
+  text-decoration: none;
+}
+
+.default {
+  a {
+    font-size: 14px;
+    .linkMixinDefault();
+    .noUnderline();
+
+    &:hover {
+      .noUnderline()
+    }
+  }
+}
+
+.ghost {
+  a {
+    font-size: 14px;
+    .linkMixinGhost();
+    .noUnderline();
+
+    &:hover {
+      .noUnderline()
+    }
+  }
+}

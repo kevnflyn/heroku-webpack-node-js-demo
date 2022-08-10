@@ -1,0 +1,60 @@
+@import '../../style/phare-theme';
+
+.wrapper {
+  position: relative;
+  background-position: bottom;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.color-brand {
+  background-color: @phare-brand-color;
+}
+
+.color-gray {
+  background-color: @component-light-background;
+}
+
+.color-transparent {
+  background-color: transparent;
+}
+
+.see-through-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.see-through-layer-brand {
+  background-color: fade(@phare-brand-color, 35%);
+}
+
+.container {
+  padding: 40px 0;
+  display: flex;
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.size-full,
+.size-full .container {
+  min-height: 100vh;
+}
+
+.size-partial,
+.size-partial .container {
+  min-height: 80vh;
+}
+
+.size-fit,
+.size-fit .container {
+  height: auto;
+  min-height: auto;
+}

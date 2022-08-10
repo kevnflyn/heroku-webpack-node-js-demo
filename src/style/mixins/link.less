@@ -1,0 +1,21 @@
+
+.linkMixinDefault {
+  color: @link-color;
+  text-decoration: underline;
+  text-decoration-color: @phare-brand-color;
+  transition: all 0.3s;
+  
+  &:hover {
+    color: @link-color-hover;
+    text-decoration: underline;
+    text-decoration-color: @phare-brand-color;
+  }
+}
+
+.linkMixinGhost {
+  color: @phare-secondary-color;
+
+  &:hover {
+    color: @link-color-hover;
+  }
+}

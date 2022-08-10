@@ -2,7 +2,7 @@ const chalk = require('chalk')
 const debug = require('debug')
 const morgan = require('morgan')
 
-// const api = require('./api')
+const api = require('./api')
 
 const debugCommonMiddleware = debug('commonMiddleware')
 
@@ -13,7 +13,7 @@ module.exports = app => {
   )
 
   debugCommonMiddleware(chalk.green('Use api module with express...'))
-  // app.use('/api', api)
+  app.use('/api', api)
 
   return app
 }

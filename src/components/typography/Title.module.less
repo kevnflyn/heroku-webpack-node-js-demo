@@ -1,0 +1,32 @@
+@import '../../style/phare-theme.less';
+
+.title {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: @text-color;
+
+    &.white {
+      color: white;
+    }
+
+    &.achromatopsia {
+      color: @phare-primary-color-achromatopsia;
+    }
+
+    &.brand {
+      color: @phare-brand-color;
+    }
+
+    &.lightweight {
+      font-weight: normal;
+    }
+  }
+
+  h1.megaSize {
+    font-size: 64px;
+  }
+}

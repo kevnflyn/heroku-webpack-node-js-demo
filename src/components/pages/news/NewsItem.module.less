@@ -1,0 +1,44 @@
+@import '../../../style/phare-theme.less';
+
+.listItem {
+  padding: (
+    @phare-spacing-medium-plus + @phare-spacing-medium
+  ) (
+    @phare-spacing-small + @phare-spacing-medium
+  );
+  display: flex;
+  align-items: flex-start !important;
+}
+
+.listItemContent {
+  width: 100%;
+}
+
+.datePublished {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@keyframes highlight-animation {
+  25% {
+    background-color: #fff7dc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  75% {
+    background-color: #fff7dc;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlighted {
+  animation: highlight-animation 1.5s 1s;
+}
+
+.newsItemRead {
+  .read();
+}

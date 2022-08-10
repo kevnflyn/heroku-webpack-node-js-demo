@@ -2,6 +2,7 @@ const fs = require('fs')
 const http = require('http')
 const https = require('https')
 const path = require('path')
+const express = require('express')
 
 const chalk = require('chalk')
 const debug = require('debug')
@@ -33,6 +34,10 @@ module.exports = app => {
     WebpackHotMiddleware(compiler)
   )
 
+  app.use(express.static('assets'))
+
+  commonMiddlware(app)
+
   app.get('*', (req, res) => {
     res.sendFile(path.join(compiler.outputPath, 'index.html'));
   });
@@ -48,8 +53,6 @@ module.exports = app => {
   //     }
   //   })
   // })
-
-  commonMiddlware(app)
 
   // const sslOptions = {
   //   key: fs.readFileSync('138.68.64.50+3-key.pem'),
