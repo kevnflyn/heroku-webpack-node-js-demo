@@ -1,11 +1,33 @@
-const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8080;
-const app = express(); 
-// the __dirname is the current directory from where the script is // running
-app.use(express.static(__dirname)); 
-// send the user to index html page inspite of the url
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
-}); 
-app.listen(port);
+const cookieParser = require('cookie-parser')
+const cors = require('cors')
+const dotenv = require('dotenv')
+const express = require('express')
+
+// const devMiddleware = require('./server/devMiddleware.js')
+const prodMiddleWare = require('./server/prodMiddleware.js')
+// const scheduledJobs = require('./server/scheduledJobs/scheduledJobs')
+
+dotenv.config()
+
+const app = express()
+
+app.use(express.json())
+
+app.use(cors({
+  origin: process.env.FRONT_URL,
+  credentials: true
+}))
+
+app.use(cookieParser())
+
+prodMiddleWare(app)
+
+// if (process.env.NODE_ENV === 'development') {
+//   devMiddleware(app)
+// }
+
+// if (process.env.NODE_ENV === 'production') {
+//   prodMiddleWare(app)
+// }
+
+// scheduledJobs.complianceNewsEmailJob()
