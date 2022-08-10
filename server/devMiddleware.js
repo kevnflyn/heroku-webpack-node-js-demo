@@ -13,7 +13,7 @@ const commonMiddlware = require('./commonMiddleware.js')
 
 const debugDevMiddleware = debug('devMiddleware')
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 module.exports = app => {
   debugDevMiddleware(chalk.green('Compiling bundle...'))
@@ -49,5 +49,7 @@ module.exports = app => {
   //   })
   // })
 
-  app.listen(httpPort)
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`)
+  })
 }
