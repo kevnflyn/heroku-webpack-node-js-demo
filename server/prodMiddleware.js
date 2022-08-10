@@ -8,6 +8,8 @@ const express = require('express')
 const PORT = process.env.PORT || 3000
 
 module.exports = app => {
+  app.use(express.static(path.resolve(__dirname,  '..', 'assets',))); 
+
   // the __dirname is the current directory from where the script is // running
   app.use(express.static(path.resolve(__dirname,  '..', 'dist',))); 
 

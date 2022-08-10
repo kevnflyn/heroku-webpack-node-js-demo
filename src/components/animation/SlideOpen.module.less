@@ -1,0 +1,21 @@
+
+@animation-duration-base: 0.3s;
+
+.slideOpenContainer.isOpen .antMotionCollapse,
+.slideOpenContainer:hover .antMotionCollapse {
+  opacity: 1;
+  height: auto;
+  z-index: 1;
+}
+
+.antMotionCollapse {
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height @animation-duration-base ease-in-out,
+    opacity @animation-duration-base ease-in-out !important;
+}

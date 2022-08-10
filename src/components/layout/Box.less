@@ -1,0 +1,39 @@
+@import '../../style/phare-variables.less';
+
+//https://stackoverflow.com/questions/20954762/arrays-with-less
+
+//https://stackoverflow.com/questions/8526128/less-string-interpolation
+
+//http://lesscss.org/features/#variables-feature
+
+@sizes: 
+  base-1 @phare-spacing-base,
+  base-2 @phare-spacing-base,
+  base-3 @phare-spacing-small,
+  base-4 @phare-spacing-medium,
+  base-5 @phare-spacing-large,
+  base-6 @phare-spacing-extra-large;
+
+// @badge-colors: 
+//   blue  #213038,
+//   gray  #F0F1F5,
+//   green #66CC99,
+//   red   #FC575E;
+
+// .for-each(@pair in @badge-colors) {
+//   @key: at(@pair, 1);
+//   .badge-@{key} {
+//       color: at(@pair, 2);
+//   }
+// }
+
+// .spaceOutside-all {
+//   padding: @phare-spacing-medium;
+// }
+
+// .spaceOutside(@n, @direction, @i: length(@sizes)) when (@i =< @n) {
+//   .space-outside-@{direction}-@{i} {
+//     "@{cssProp}": extract(@colors, @i)
+//   }
+//   .spaceOutside(@n, (@i + 1));
+// }

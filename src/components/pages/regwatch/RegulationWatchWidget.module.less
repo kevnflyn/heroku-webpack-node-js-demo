@@ -1,0 +1,34 @@
+.wrapperContent {
+  position: relative;
+  height: calc(100% - 30px);
+}
+
+.contentContainer {
+  overflow: scroll;
+  height: 100%;
+}
+
+.shadow {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 10px;
+  transition: all 0.2s;
+}
+
+.topShadow {
+  .shadow();
+  top: 0;
+  background: -webkit-linear-gradient(270deg, #eee, transparent);
+  background: linear-gradient(180deg, #eee, transparent);
+  opacity: 0;
+}
+
+.bottomShadow {
+  .shadow();
+  bottom: 0;
+  background: -webkit-linear-gradient(90deg, #eee, transparent);
+  background: linear-gradient(0deg, #eee, transparent);
+  opacity: 0;
+}

@@ -1,0 +1,141 @@
+@import './Button.less';
+
+.button {
+  transition: all .2s !important;
+
+  &:global(.ant-btn-link) {
+    color: black;
+  }
+}
+
+.opposite {
+  :global {
+    .@{btn-prefix-cls} {
+      .button-variant-primary(@btn-opposite-color; @btn-opposite-bg);
+    
+      .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+        border-right-color: @btn-group-border;
+        border-left-color: @btn-group-border;
+  
+        &:disabled {
+          border-color: @btn-default-border;
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:first-child {
+        &:not(:last-child) {
+          border-right-color: @btn-group-border;
+  
+          &[disabled] {
+            border-right-color: @btn-default-border;
+          }
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+      .@{btn-prefix-cls}-group & + & {
+        border-left-color: @btn-group-border;
+  
+        &[disabled] {
+          border-left-color: @btn-default-border;
+        }
+      }
+    }
+  }
+}
+
+.gray {
+  :global {
+    .@{btn-prefix-cls} {
+      background-color: transparent;
+      color: @btn-gray-color;
+      background: @btn-gray-bg;
+      border-color: @btn-gray-border; // a inside Button which only work in Chrome
+      // http://stackoverflow.com/a/17253457
+      > a:only-child {
+        color: currentColor;
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: transparent;
+          content: '';
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: @btn-gray-hover-color;
+        border-color: @btn-gray-hover-border;
+        background: transparent;
+      }
+    
+      .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+        border-right-color: @btn-group-border;
+        border-left-color: @btn-group-border;
+  
+        &:disabled {
+          border-color: @btn-default-border;
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:first-child {
+        &:not(:last-child) {
+          border-right-color: @btn-group-border;
+  
+          &[disabled] {
+            border-right-color: @btn-default-border;
+          }
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+      .@{btn-prefix-cls}-group & + & {
+        border-left-color: @btn-group-border;
+  
+        &[disabled] {
+          border-left-color: @btn-default-border;
+        }
+      }
+    }
+  }
+}
+
+.tertiary {
+  :global {
+    .@{btn-prefix-cls} {
+      .button-variant-primary(white; @phare-tertiary-color);
+    
+      .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+        border-right-color: @btn-group-border;
+        border-left-color: @btn-group-border;
+  
+        &:disabled {
+          border-color: @btn-default-border;
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:first-child {
+        &:not(:last-child) {
+          border-right-color: @btn-group-border;
+  
+          &[disabled] {
+            border-right-color: @btn-default-border;
+          }
+        }
+      }
+  
+      .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+      .@{btn-prefix-cls}-group & + & {
+        border-left-color: @btn-group-border;
+  
+        &[disabled] {
+          border-left-color: @btn-default-border;
+        }
+      }
+    }
+  }
+}

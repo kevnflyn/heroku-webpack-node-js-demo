@@ -1,11 +1,11 @@
 const path = require('path')
 
-// const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
-    path.resolve(process.cwd(), 'src/index.js')
+    path.resolve(process.cwd(), 'src/App.jsx')
   ],
   resolve: {
     alias: {
@@ -23,14 +23,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: 'assets/images', to: 'assets/images' },
-    //     { from: 'assets/translations', to: 'assets/translations' }
-    //   ],
-    //   options: {
-    //     concurrency: 100
-    //   }
-    // })
+    new CopyPlugin({
+      patterns: [
+        { from: 'assets/images', to: 'assets/images' },
+        { from: 'assets/translations', to: 'assets/translations' }
+      ],
+      options: {
+        concurrency: 100
+      }
+    })
   ]
 }

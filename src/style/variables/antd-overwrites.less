@@ -1,0 +1,76 @@
+
+@text-color-secondary: #677478;
+
+@layout-body-background: @phare-quinary-color; // was #ebeef0
+@layout-header-background: #fff;
+@component-background: @component-light-background;
+
+// @info-color: @phare-primary-color;
+@success-color: @green-6;
+@processing-color: @blue-6;
+@error-color: @red-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9;
+@white: #fff;
+@black: #000;
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+@primary-1: color(~`colorPalette('@{phare-primary-color}', 1) `); // replace tint(@phare-primary-color, 90%)
+@primary-2: color(~`colorPalette('@{phare-primary-color}', 2) `); // replace tint(@phare-primary-color, 80%)
+@primary-3: color(~`colorPalette('@{phare-primary-color}', 3) `); // unused
+@primary-4: color(~`colorPalette('@{phare-primary-color}', 4) `); // unused
+@primary-5: color(
+  ~`colorPalette('@{phare-primary-color}', 5) `
+); // color used to control the text color in many active and hover states, replace tint(@phare-primary-color, 20%)
+@primary-6: @phare-primary-color; // color used to control the text color of active buttons, don't use, use @phare-primary-color
+@primary-7: color(~`colorPalette('@{phare-primary-color}', 7) `); // replace shade(@phare-primary-color, 5%)
+@primary-8: color(~`colorPalette('@{phare-primary-color}', 8) `); // unused
+@primary-9: color(~`colorPalette('@{phare-primary-color}', 9) `); // unused
+@primary-10: color(~`colorPalette('@{phare-primary-color}', 10) `); // unused
+
+
+// Border
+@border-color-base: #ebeef0;
+
+// Collapse
+@background-color-light: @component-background;
+
+// Switch
+@switch-color: red;
+
+// Layout
+@layout-header-height: 60px;
+@highlight-color: @phare-primary-color;
+@menu-highlight-color: @phare-primary-color;
+@menu-highlight-background: white;
+// @menu-item-active-bg: white;
+// @menu-item-color: white;
+@menu-submenu-item-color: @text-color;
+@input-hover-border-color: @phare-primary-color;
+
+@text-color: #353535;
+// choices!
+// e.g. Achromatopsia from brand colour -> #494949
+// variation from Achromatopsia -> #353535
+// even stronger variation -> #181818
+// randomly tried #0d032c but was too dark
+// originally rgba(0, 0, 0, 0.85)
+@link-color: @text-color; // https://www.colorhexa.com/220774
+@link-color-hover: @phare-primary-color;
+@btn-default-color: @text-color;
+@btn-ghost-color: @text-color;
+@color: @text-color;
+@btn-link-hover-bg: @phare-primary-color;
+
+
+// Font Sizes
+@font-size-base: 16px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+@heading-1-size: ceil(@font-size-base * 2.71);
+@heading-2-size: ceil(@font-size-base * 2.14);
+@heading-3-size: ceil(@font-size-base * 1.71);
+@heading-4-size: ceil(@font-size-base * 1.42);
+@heading-5-size: ceil(@font-size-base * 1.14);
