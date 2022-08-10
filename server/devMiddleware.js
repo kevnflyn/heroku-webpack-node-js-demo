@@ -1,0 +1,46 @@
+const path = require('path')
+
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware')
+const WebpackHotMiddleware = require('webpack-hot-middleware')
+
+const config = require('../build/webpack.config.dev')
+const commonMiddlware = require('./commonMiddleware.js')
+
+const PORT = process.env.PORT || 3000
+
+module.exports = app => {
+  const compiler = webpack(config)
+
+  const middleware = webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath
+  })
+
+  app.use(middleware)
+
+  app.use(
+    WebpackHotMiddleware(compiler)
+  )
+
+  commonMiddlware(app)
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(compiler.outputPath, 'index.html'))
+  })
+
+  // app.get('/home|/login|/register|/password-reset-request|/password-reset|/app|/app/*', (req, res) => {
+  //   const indexFile = path.resolve(compiler.outputPath, 'index.html')
+
+  //   compiler.outputFileSystem.readFile(indexFile, (error, file) => {
+  //     if (error) {
+  //       res.sendStatus(404)
+  //     } else {
+  //       res.end(file)
+  //     }
+  //   })
+  // })
+
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`)
+  })
+}
