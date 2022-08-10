@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = 8080;
+const port = process.env.PORT || 3000; // 3000 is Heroku's port of choice
 const app = express(); 
 // the __dirname is the current directory from where the script is // running
 app.use(express.static(__dirname)); 
