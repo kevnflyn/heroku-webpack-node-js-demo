@@ -8,18 +8,13 @@ const commonMiddlware = require('./commonMiddleware.js')
 const PORT = process.env.PORT || 3000
 
 module.exports = app => {
-  app.use(express.static(path.resolve('.', 'dist')))
+  app.use(express.static(path.resolve(__dirname,  '..', 'dist',))); 
 
   commonMiddlware(app)
 
   app.get('*', (req, res) => {
-    console.log(`
-      sendFile to ${path.resolve('.', 'dist', 'index.html')}
-    `)
-
-    app.use(express.static('.')) 
-    res.sendFile(path.resolve('.', 'dist', 'index.html'))
-  })
+    res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html'));
+  });
 
   app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)
