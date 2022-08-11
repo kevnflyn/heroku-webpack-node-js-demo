@@ -28,18 +28,6 @@ module.exports = app => {
     res.sendFile(path.join(compiler.outputPath, 'index.html'))
   })
 
-  // app.get('/home|/login|/register|/password-reset-request|/password-reset|/app|/app/*', (req, res) => {
-  //   const indexFile = path.resolve(compiler.outputPath, 'index.html')
-
-  //   compiler.outputFileSystem.readFile(indexFile, (error, file) => {
-  //     if (error) {
-  //       res.sendStatus(404)
-  //     } else {
-  //       res.end(file)
-  //     }
-  //   })
-  // })
-
   app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)
   })

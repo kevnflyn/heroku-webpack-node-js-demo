@@ -20,10 +20,5 @@ module.exports = app => {
 
   app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)
-
-    setInterval(() => {
-      const used = process.memoryUsage().heapUsed / 1024 / 1024
-      console.log(`The script uses approximately ${Math.round(used * 100) / 100} MB`)
-    }, 1000)
   })
 }
