@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "test",
     "start": "NODE_ENV=production node app.js",
     "start:dev": "NODE_ENV=development node app.js",
-    "build": "webpack --progress --config ./build/webpack.config.prod.js",
+    "start:mock": "NODE_ENV=development MOCK_MODE=true DEBUG=app,news node app.js",
+    "start:nodeman": "NODE_ENV=development DEBUG=app,news nodemon app.js",
+    "build": "NODE_ENV=production webpack --progress --config ./build/webpack.config.prod.js",
     "build:start": "npm run build && npm start",
-    "heroku-postbuild": "npm run build"
+    "translate": "node ./i18n/generateTranslationsFile"
   },
   "keywords": [],
   "author": "",
