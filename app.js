@@ -3,7 +3,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const express = require('express')
 
-// const devMiddleware = require('./server/devMiddleware.js')
+const devMiddleware = require('./server/devMiddleware.js')
 const prodMiddleWare = require('./server/prodMiddleware.js')
 // const scheduledJobs = require('./server/scheduledJobs/scheduledJobs')
 
@@ -20,14 +20,12 @@ app.use(cors({
 
 app.use(cookieParser())
 
-prodMiddleWare(app)
+if (process.env.NODE_ENV === 'development') {
+  devMiddleware(app)
+}
 
-// if (process.env.NODE_ENV === 'development') {
-//   devMiddleware(app)
-// }
-
-// if (process.env.NODE_ENV === 'production') {
-//   prodMiddleWare(app)
-// }
+if (process.env.NODE_ENV === 'production') {
+  prodMiddleWare(app)
+}
 
 // scheduledJobs.complianceNewsEmailJob()
