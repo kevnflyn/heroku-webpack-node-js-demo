@@ -9,7 +9,7 @@ const api = require('./api')
 const debugCommonMiddleware = debug('commonMiddleware')
 
 module.exports = app => {
-  app.use(express.static(path.resolve(__dirname,  '..', 'assets',))); 
+  app.use(express.static('assets'))
 
   debugCommonMiddleware(chalk.green('Use output information with express...'))
   app.use(
