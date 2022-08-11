@@ -32,7 +32,7 @@ const DownloadPdf = ({ link }) => {
       rel='noreferrer'
       target='_blank'
       type='ghost'
-      size='small'
+      size='middle'
       icon={<FilePdfOutlined />}
     >
       PDF

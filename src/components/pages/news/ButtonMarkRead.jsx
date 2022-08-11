@@ -15,7 +15,7 @@ const ButtonMarkRead = ({ hasReadArticle, articleId }) => {
   }
 
   return <Button
-    size='small'
+    size='middle'
     onClick={onClick}
     type='ghost'
     icon={<EyeOutlined/>}

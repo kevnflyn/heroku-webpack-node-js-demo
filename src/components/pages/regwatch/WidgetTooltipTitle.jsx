@@ -2,11 +2,9 @@ import React from 'react'
 
 import Flex from 'styled-flex-component'
 
-import Button from '../../antd/Button'
 import Tooltip from '../../antd/Tooltip'
 
 const WidgetTooltipTitle = ({
-  // icon,
   tooltipTitle,
   widgetTitle,
   buttons,
@@ -28,12 +26,6 @@ const WidgetTooltipTitle = ({
             alignCenter={alignCenter}
             alignStart={alignStart}
           >
-            {/* <Button
-              shape='circle'
-              type='tertiary'
-            >
-              {icon}
-            </Button> */}
             <span>
               {widgetTitle}
             </span>

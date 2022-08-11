@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 import Flex from 'styled-flex-component'
 
-import routes from '../../routes'
+import { routes } from '../../routes'
 import { useUserState } from '../../utils/redux'
 import Menu from '../antd/Menu'
 import Typography from '../antd/Typography'

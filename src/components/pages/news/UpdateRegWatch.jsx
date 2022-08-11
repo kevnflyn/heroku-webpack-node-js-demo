@@ -1,6 +1,6 @@
-import { EditOutlined } from '@ant-design/icons'
 import React, { useCallback } from 'react'
 
+import { EditOutlined } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 
@@ -41,7 +41,7 @@ const UpdateRegWatch = () => {
   return (
     <Button
       block
-      size='small'
+      size='middle'
       onClick={onClick}
       type='default'
       loading={loading.CREATE_REGULATION_WATCH ||

@@ -27,8 +27,7 @@ const handleResponse = async (response, dataType) => {
       return undefined
     }
   } catch (error) {
-    console.error('fetch response: ', response)
-    console.error('fetch error: ', error)
+    console.error(error)
     throw new Error(error)
   }
 

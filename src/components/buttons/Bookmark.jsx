@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 
 import Icon from '@ant-design/icons'
 
-import SvgBookmark from 'assets/images/book'
+import SvgBookmark from '../../../assets/images/bookmark.svg'
 import Button from '../antd/Button'
 import Typography from '../antd/Typography'
 

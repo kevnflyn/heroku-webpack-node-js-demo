@@ -40,7 +40,7 @@ const SearchNewsButton = () => {
       loading={loading}
       onClick={onClickSearchNews}
       type='primary'
-      size='small'
+      size='middle'
       block
     >
       <SearchOutlined/>

@@ -1,6 +1,6 @@
 import i18next from 'i18next'
 
-import { initi18n } from 'I18n/i18n'
+import { initi18n } from '../../../i18n/i18n'
 import routes from '../../routes'
 import { clientStorageLocale } from '../../services/clientStorageLocale'
 import { getNavigatorLanguage } from '../../utils/navigatorLanguage'

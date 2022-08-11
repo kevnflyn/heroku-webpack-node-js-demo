@@ -1,11 +1,10 @@
-import { SaveOutlined } from '@ant-design/icons'
 import React, { useCallback, useState } from 'react'
 
+import { SaveOutlined } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 
 import { useNetworkState } from '../../../utils/redux'
 import Button from '../../antd/Button'
-import styles from './CreateRegWatch.module.less'
 import RegulationWatchCreationForm from './RegulationWatchCreationForm'
 
 const CreateRegWatch = () => {
@@ -24,9 +23,8 @@ const CreateRegWatch = () => {
     <>
       <Button
         block
-        size='small'
+        size='middle'
         onClick={openModal}
-        className={styles.createRegWatchButton}
         type='default'
         loading={loading.CREATE_REGULATION_WATCH ||
           loading.REGULATION_WATCHES}

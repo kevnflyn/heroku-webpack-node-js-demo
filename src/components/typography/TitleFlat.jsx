@@ -1,12 +1,8 @@
 import React from 'react'
 
-import Typography from '../antd/Typography'
-import styles from './TitleFlat'
+import Title from '../typography/Title'
+import styles from './TitleFlat.module.less'
 
-const { Title } = Typography
-
-const TitleFlat = props => (
-  <Title {...props} className={styles.titleFlat}/>
-)
+const TitleFlat = props => <Title {...props} className={styles.titleFlat}/>
 
 export default TitleFlat

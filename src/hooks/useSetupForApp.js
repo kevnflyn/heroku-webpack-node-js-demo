@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react'
 
-import { initi18n } from 'I18n/i18n'
+import { initi18n } from '../../i18n/i18n'
 import { clientStorageLocale } from '../services/clientStorageLocale'
 import { alignUserLocaleWithApplication, requestSessionUser } from '../store/user/effects'
 import { getNavigatorLanguage } from '../utils/navigatorLanguage'

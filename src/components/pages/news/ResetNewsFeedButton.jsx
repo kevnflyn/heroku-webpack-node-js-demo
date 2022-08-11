@@ -57,7 +57,7 @@ const ResetNewsFeedButton = ({ block }) => {
   return (
     <Button
       block={block}
-      size='small'
+      size='middle'
       type='default'
       onClick={onClickResetFeed}
     >

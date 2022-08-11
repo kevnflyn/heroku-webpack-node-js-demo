@@ -1,6 +1,16 @@
 
-@text-color-secondary: #677478;
+// Font Sizes
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+@heading-1-size: ceil(@font-size-base * 2.71);
+@heading-2-size: ceil(@font-size-base * 2.14);
+@heading-3-size: ceil(@font-size-base * 1.71);
+@heading-4-size: ceil(@font-size-base * 1.42);
+@heading-5-size: ceil(@font-size-base * 1.14);
 
+// Colours
+@text-color-secondary: #677478;
 @layout-body-background: @phare-quinary-color; // was #ebeef0
 @layout-header-background: #fff;
 @component-background: @component-light-background;
@@ -37,9 +47,6 @@
 // Collapse
 @background-color-light: @component-background;
 
-// Switch
-@switch-color: red;
-
 // Layout
 @layout-header-height: 60px;
 @highlight-color: @phare-primary-color;
@@ -63,14 +70,4 @@
 @btn-ghost-color: @text-color;
 @color: @text-color;
 @btn-link-hover-bg: @phare-primary-color;
-
-
-// Font Sizes
-@font-size-base: 16px;
-@font-size-lg: @font-size-base + 2px;
-@font-size-sm: 12px;
-@heading-1-size: ceil(@font-size-base * 2.71);
-@heading-2-size: ceil(@font-size-base * 2.14);
-@heading-3-size: ceil(@font-size-base * 1.71);
-@heading-4-size: ceil(@font-size-base * 1.42);
-@heading-5-size: ceil(@font-size-base * 1.14);
+@btn-font-size-sm: @font-size-sm;
