@@ -1,0 +1,222 @@
+###
+
+# GET http://localhost:3000/api/compliance/news?countries=EU&countries=LUX&countries=INT&offset=20&size=10&sources=ALFI&sources=CAA&sources=ESMA&sources=CRF&sources=ABBL&sources=CNPD&sources=BCL&sources=EIOPA&sources=IOSCO&sources=CEU&sources=EC HTTP/1.1
+# GET http://localhost:3000/api/compliance/news?sources=ALFI&sources=CAA&sources=ESMA&sources=CRF&sources=ABBL&sources=CNPD&sources=BCL&sources=EIOPA&sources=IOSCO&sources=CEU&sources=EC&countries=EU&countries=LUX&countries=INT&fromPublishedDate=2021-06-06T22:00:00.000Z&toPublishedDate=2021-06-06T22:08:00.000Z
+# GET http://localhost:3000/api/compliance/news?sources=CSSF&sources=EBA&sources=EP&sources=FSB&sources=ESRB&sources=ALFI&sources=ECB&sources=CAA&sources=ESMA&sources=CRF&sources=ABBL&sources=CNPD&sources=BCL&sources=EIOPA&sources=IOSCO&sources=CEU&sources=EC&countries=Luxembourg&countries=International&countries=EU&fromPublishedDate=2020-08-19T18%3A21%3A39.442Z&toPublishedDate=2021-08-18T22%3A08%3A00.000Z&size=3
+# GET http://localhost:3000/api/compliance/news?query=Single%20resolution%20mechanism%20-%20Regulation%20(EU)%20No%20806/2014 HTTP/1.1
+GET http://localhost:3000/api/compliance/news?countries=EU&countries=International&countries=Luxembourg&sources=EC&sources=EIOPA&sources=BCL&sources=CRF&sources=CEU&sources=CAA&sources=CSSF&sources=EBA&sources=ECB&sources=ALFI&sources=EP&sources=ESMA&sources=ESRB&sources=IOSCO&sources=FSB&sources=CNPD&sources=ABBL&fromPublishedDate=2022-03-12T23%3A00%3A00.000Z&toPublishedDate=2022-03-13T23%3A00%3A00.000Z HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NzI2ODQzOSwiZXhwIjoxNjQ3MjY5OTM5fQ._EgcYHp4smRB_2OeatzMgQ5BCjyedo8YVGpVAKP0i7I
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:3000/api/compliance/pinned-articles
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0OTA4MjI1NCwiZXhwIjoxNjQ5MDgzNzU0fQ.WZHfOJUGPDbZiaOiJQ3RlX0oxgNAp9vVy3nRtNXGuno
+
+
+###
+
+PUT http://localhost:3000/api/compliance/pinned-articles
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0OTA4MjI1NCwiZXhwIjoxNjQ5MDgzNzU0fQ.WZHfOJUGPDbZiaOiJQ3RlX0oxgNAp9vVy3nRtNXGuno
+
+{
+  "pinnedArticles": [1]
+}
+
+
+###
+
+# GET http://localhost:3000/api/internal/compliance/news?sources=ABBL&sources=CRF&sources=EIOPA&sources=EP&sources=EBA&sources=ESMA&sources=ALFI&sources=ECB&sources=CAA&sources=CSSF&sources=FSB&sources=ESRB&sources=CNPD&sources=BCL&sources=IOSCO&sources=CEU&sources=EC&countries=International&countries=Luxembourg&countries=Europe_EU&fromPublishedDate=2020-07-02T16%3A11%3A57.516Z&toPublishedDate=2021-07-01T22%3A08%3A00.000Z
+GET http://localhost:3000/api/internal/compliance/news?sources=ABBL&sources=CRF&sources=EIOPA&sources=EP&sources=EBA&sources=ESMA&sources=ALFI&sources=ECB&sources=CAA&sources=CSSF&sources=FSB&sources=ESRB&sources=CNPD&sources=BCL&sources=IOSCO&sources=CEU&sources=EC&countries=International&countries=Luxembourg&countries=Europe_EU&fromPublishedDate=2020-07-02T16%3A11%3A57.516Z&toPublishedDate=2021-07-01T22%3A08%3A00.000Z&internalToken=4fffbb7c26f239dcd22fe08884b68db33868a7ccd7ea2109c8f9de479ba476121f5068fbcff6500d324c85f26a0327eb0884ff387c63273989eb6b19291bf30f HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NzI2NjY4MCwiZXhwIjoxNjQ3MjY4MTgwfQ.ZyudjTGdTnuAhaQdyH0fO_gW01S6x-FcbDPwSsif27w
+
+
+###
+
+GET http://localhost:3000/api/compliance/read?articleIds[]=3755
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY1MTg0NzMxNSwiZXhwIjoxNjUxODQ4ODE1fQ.mljuQ1uvDEDzSC4pjcETNigiBcnGS-mVDGvHvF9nWw8
+
+
+###
+
+POST http://localhost:3000/api/compliance/read
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY1MTg0NzMxNSwiZXhwIjoxNjUxODQ4ODE1fQ.mljuQ1uvDEDzSC4pjcETNigiBcnGS-mVDGvHvF9nWw8
+Content-Type: application/json
+
+{
+  "articleId": 3755
+}
+
+
+###
+
+GET http://localhost:3000/api/internal/users?ids[]=e5ba470c-7ced-424a-9096-368aa5e7628b
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NzI2ODQzOSwiZXhwIjoxNjQ3MjY5OTM5fQ._EgcYHp4smRB_2OeatzMgQ5BCjyedo8YVGpVAKP0i7I
+content-type: application/json
+
+
+###
+
+# alertTimeSunday=17%3A7%20%2B01&
+GET http://localhost:3000/api/compliance/watch?hasAlertsEnabled=false
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NzI2NDQ1OCwiZXhwIjoxNjQ3MjY1OTU4fQ.h2WVYmj9-MMmNCEgMcwYfRiBPbSoSclRZ_B2X7Sa9EY
+content-type: application/json
+
+
+###
+
+POST http://localhost:3000/api/compliance/watch
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NDQzOTEyMCwiZXhwIjoxNjQ0NDQwNjIwfQ.jBtBRIOGL_oJOvkT4lp-q4zGECk6MLwEmdjZ1TaXGe0
+content-type: application/json
+
+{
+  "name": "Example",
+  "filter": { "sources": ["EC"] },
+  "isPrivate": false
+}
+
+
+###
+
+PUT http://localhost:3000/api/compliance/watch/61
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIyIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0OTMzNjc4OSwiZXhwIjoxNjQ5MzM4Mjg5fQ.WG0474P1E02sQEukssft0RyjP1yF5NrAPpYM8Gk_fl0
+content-type: application/json
+
+{
+  "name": "Example",
+  "filter": { "sources": ["EC"] },
+  "isPrivate": true
+}
+
+
+###
+
+POST http://localhost:3000/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "rwestanton@yahoo.co.uk",
+  "password": "abc12345"
+}
+
+
+###
+
+GET http://localhost:3000/api/sessionuser HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6IlJvYmVydCIsImxhc3RuYW1lIjoiU3RhbnRvbiIsImVtYWlsIjoicndlc3RhbnRvbkBnbWFpbC5jb20iLCJwc3dyZCI6IiQyYiQxMCRmRUJ4R1BSYlpPTU5tdUdjbnZrM3kuLzcxSmhCWjJmSHFTWGNpbWJxaWpEeWFxeXlIRnFLVyIsImlkIjoiY2U4YWE0OGMtZWE0ZS00YTFhLWE1MTQtMDZkZTgxZjU2NWYxIiwibGFuZyI6ImVuIn0sImlhdCI6MTY0MTY0MDY5MCwiZXhwIjoxNjQxNjQyMTkwfQ.2ZsEkrIlwoHNzVqUzJnnZHJl446Vsr-t6JLo6MOT9I8
+
+
+###
+
+POST http://localhost:3000/api/register HTTP/1.1
+content-type: application/json
+
+{
+  "firstname": "Robert",
+  "lastname": "Stanton",
+  "email": "rwestanton@yahoo.co.uk",
+  "password": "1234qwer"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/register HTTP/1.1
+content-type: application/json
+
+{
+  "email": "rwestanton@yahoo.co.uk",
+  "password": "abc12345"
+}
+
+
+###
+
+POST http://localhost:3000/api/register/confirm HTTP/1.1
+content-type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJSb2JlcnQiLCJsYXN0bmFtZSI6IlN0YW50b24iLCJlbWFpbCI6InJ3ZXN0YW50b25AeWFob28uY28udWsiLCJpYXQiOjE2MTQ0NTcwNjQsImV4cCI6MTYxNDQ1ODg2NH0.Xm8Bf1Hx082kutg1StGEGBZ_PfF5VVG-yE-PeEMKroo",
+}
+
+
+###
+
+GET http://localhost:3000/api/user/company HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxIiwiaWQiOiJlNWJhNDcwYy03Y2VkLTQyNGEtOTA5Ni0zNjhhYTVlNzYyOGIiLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiUm9iZXJ0IiwibGFzdG5hbWUiOiJTdGFudG9uIiwidmFsaWQiOnRydWUsImlhdCI6MTY0NzI2NjY4MCwiZXhwIjoxNjQ3MjY4MTgwfQ.ZyudjTGdTnuAhaQdyH0fO_gW01S6x-FcbDPwSsif27w
+
+
+###
+
+POST http://localhost:3000/api/user/company HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJSb2JlcnQiLCJsYXN0bmFtZSI6IlN0YW50b24iLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwicHN3cmQiOiIkMmIkMTAkdVUvWEdpZmpQLnlSZGsvRE1vQnV4dVkwb3hybm5tTHcyQ2dqMWpoWHVFZ3QyQUJTTHN0SmUiLCJpZCI6ImI1MDgwOTAyLTlhYWYtNGU4ZS1hOTM5LTE3M2NkYmI5Yzg5MiIsImV4cCI6MTYyMjIxNzgyMywiaWF0IjoxNjIyMjE0NTk2fQ.qXoXOOFYVZUrtoIoA4UCsYvaTWi0yZSY9R6yJbIR6zY
+Content-Type: application/json
+
+{
+  "complianceAuthorities": ["EP"],
+  "countriesOperating": ["EU"],
+  "jobTitle": "Web Developer",
+  "companyName": "Phare"
+}
+
+
+###
+  
+PUT http://localhost:3000/api/user/company HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJSb2JlcnQiLCJsYXN0bmFtZSI6IlN0YW50b24iLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwicHN3cmQiOiIkMmIkMTAkdVUvWEdpZmpQLnlSZGsvRE1vQnV4dVkwb3hybm5tTHcyQ2dqMWpoWHVFZ3QyQUJTTHN0SmUiLCJpZCI6ImI1MDgwOTAyLTlhYWYtNGU4ZS1hOTM5LTE3M2NkYmI5Yzg5MiIsImV4cCI6MTYyMjIxNzgyMywiaWF0IjoxNjIyMjE0NTk2fQ.qXoXOOFYVZUrtoIoA4UCsYvaTWi0yZSY9R6yJbIR6zY
+Content-Type: application/json
+
+{
+  "complianceAuthorities": ["EP"],
+  "countriesOperating": ["EU"],
+  "jobTitle": "Web Developer",
+  "companyName": "Phare"
+}
+
+###
+
+GET http://localhost:3000/api/user/locale HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6IlJvYmVydCIsImxhc3RuYW1lIjoiU3RhbnRvbiIsImVtYWlsIjoicndlc3RhbnRvbkBnbWFpbC5jb20iLCJwc3dyZCI6IiQyYiQxMCRmRUJ4R1BSYlpPTU5tdUdjbnZrM3kuLzcxSmhCWjJmSHFTWGNpbWJxaWpEeWFxeXlIRnFLVyIsImlkIjoiY2U4YWE0OGMtZWE0ZS00YTFhLWE1MTQtMDZkZTgxZjU2NWYxIiwibGFuZyI6ImRlIn0sImlhdCI6MTY0MTY0MjgyOSwiZXhwIjoxNjQxNjQ0MzI5fQ.EW0rAhiS1I5pUxNeQ8eX0uQZDTuC0fjlXlMSXkzwEZA
+content-type: application/json
+
+
+###
+
+PUT http://localhost:3000/api/user/locale HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6IlJvYmVydCIsImxhc3RuYW1lIjoiU3RhbnRvbiIsImVtYWlsIjoicndlc3RhbnRvbkBnbWFpbC5jb20iLCJwc3dyZCI6IiQyYiQxMCRmRUJ4R1BSYlpPTU5tdUdjbnZrM3kuLzcxSmhCWjJmSHFTWGNpbWJxaWpEeWFxeXlIRnFLVyIsImlkIjoiY2U4YWE0OGMtZWE0ZS00YTFhLWE1MTQtMDZkZTgxZjU2NWYxIiwibGFuZyI6ImRlIn0sImlhdCI6MTY0MTY0MjgyOSwiZXhwIjoxNjQxNjQ0MzI5fQ.EW0rAhiS1I5pUxNeQ8eX0uQZDTuC0fjlXlMSXkzwEZA
+content-type: application/json
+
+{
+  "locale": {
+    "lang": "en"
+  }
+}
+
+
+###
+
+GET http://localhost:3000/api/user/location HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6IlJvYmVydCIsImxhc3RuYW1lIjoiU3RhbnRvbiIsImVtYWlsIjoicndlc3RhbnRvbkBnbWFpbC5jb20iLCJwc3dyZCI6IiQyYiQxMCRmRUJ4R1BSYlpPTU5tdUdjbnZrM3kuLzcxSmhCWjJmSHFTWGNpbWJxaWpEeWFxeXlIRnFLVyIsImlkIjoiY2U4YWE0OGMtZWE0ZS00YTFhLWE1MTQtMDZkZTgxZjU2NWYxIiwibGFuZyI6ImVuIn0sImlhdCI6MTY0MTY2ODUzNiwiZXhwIjoxNjQxNjcwMDM2fQ.PpWW-PslyLZN2aTf6-lKhq5xl4j6UL2RfGK9sjfsQG4
+content-type: application/json
+
+###
+
+GET http://localhost:3000/api/user/alerts HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJSb2JlcnQiLCJsYXN0bmFtZSI6IlN0YW50b24iLCJlbWFpbCI6InJ3ZXN0YW50b25AZ21haWwuY29tIiwicHN3cmQiOiIkMmIkMTAkdVUvWEdpZmpQLnlSZGsvRE1vQnV4dVkwb3hybm5tTHcyQ2dqMWpoWHVFZ3QyQUJTTHN0SmUiLCJpZCI6ImI1MDgwOTAyLTlhYWYtNGU4ZS1hOTM5LTE3M2NkYmI5Yzg5MiIsImV4cCI6MTYyMjIxNzgyMywiaWF0IjoxNjIyMjE0NTk2fQ.qXoXOOFYVZUrtoIoA4UCsYvaTWi0yZSY9R6yJbIR6zY
+
+
+###
+  
+PUT http://localhost:3000/api/user/alerts HTTP/1.1
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6IlJvYmVydCIsImxhc3RuYW1lIjoiU3RhbnRvbiIsImVtYWlsIjoicndlc3RhbnRvbkBnbWFpbC5jb20iLCJwc3dyZCI6IiQyYiQxMCRQd212MjNoeFFrUnZYQ3RFV2RYTWlPZm1aMmpOYkU2ek9tU1dOQi56TUNUQkV5UElXeTBRNiIsImlkIjoiYjUwODA5MDItOWFhZi00ZThlLWE5MzktMTczY2RiYjljODkyIiwibGFuZyI6ImVuIn0sImlhdCI6MTYzMjE2NDU1MywiZXhwIjoxNjMyMTY2MDUzfQ.qswIhEDR-8EzadOj-eFpPjQ8R_uz_fp5pf2lhGe0XLI
+Content-Type: application/json
+
+{
+  "hasOptedForComplianceAlerts": true
+}
+
+###
+
+GET http://localhost:3000/api/internal/user/alerts/optedin?internalToken=4fffbb7c26f239dcd22fe08884b68db33868a7ccd7ea2109c8f9de479ba476121f5068fbcff6500d324c85f26a0327eb0884ff387c63273989eb6b19291bf30f HTTP/1.1
+
