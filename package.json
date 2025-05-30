@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "webpack": "^5.74.0",
+    "webpack": "^5.99.8",
     "webpack-cli": "^4.10.0"
   }
 }
